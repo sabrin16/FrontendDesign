@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/a576612222.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="site.css">
+    <title>Projects - BackOffice Alpha Portal</title>
+</head>
+<body>
+    <div class="Backoffice-wrapper">
+        <aside id="sidebar">
+            <section class="logotype">
+                <a href="#">
+                    <img src="images/logotype/alpha-logotype-icon.svg" alt="alpha">
+                    <span>alpha</span>
+                </a>
+            </section>
+            <nav class="nav-links">
+                <a href="projects.html" class="nav-link active">
+                    <i class="fa-duotone fa-solid fa-briefcase"></i>
+                    <span>Projects</span>
+                </a>
+                <a href="#" class="nav-links">
+                    <i class="fa-duotone fa-solid fa-handshake"></i>
+                    <span>Clients</span>
+                </a>
+                <a href="#" class="nav-links">
+                    <i class="fa-duotone fa-solid fa-user-group"></i>
+                    <span>Members</span>
+                </a>
+            </nav>
+
+        </aside>
+        <main>
+            <header id="header">
+                <form class="search-form" method="get" asp-controller="" asp-action="" novalidate>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" class="form-search-input" placeholder="Search anything..." />
+                </form>
+                <button type="button" data-type="dropdown" data-target="#notifications" class="btn-notification"></button>
+                <button type="button" data-type="dropdown" data-target="#account" class="btn-account"></button>
+            </header>
+            <div id="main">
+                content
+            </div>
+        </main>
+    </div>
+    <script src="site.js"></script>
+</body>
+</html>

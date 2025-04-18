@@ -57,7 +57,6 @@
     --border-color: var(--gray-500);
     --border-focus-color: var(--blue-semilight);
     --divider-color: var(--gray-500);
-    --divider-background-color: var(--white-100);
 
     /* text */
     --text-color: var(--dark-400);
@@ -79,12 +78,17 @@
     --link-hover-color: var(--blue-dark);
 
     /* links - navlink */
-    --navlink-text-color: var(--blue-400);
+    --navlink-text-color: var(--dark-400);
+    --navlink-border-color: var(--transparent);
+    --navlink-background-color: var(--transparent);
+
     --navlink-text-hover-color: var(--blue);
-    --navlink-text-active-color: var(--blue);
-    --navlink-background-color: transparent;
+    --navlink-border-hover-color: var(--blue-light-opacity);
     --navlink-background-hover-color: var(--blue-light-opacity);
-    --navlink-background-active-color: var(--blue-light-opacity); 
+
+    --navlink-text-active-color: var(--blue);
+    --navlink-border-active-color: var(--blue-light-opacity);
+    --navlink-background-active-color: var(--blue-light-opacity);
 
     /* buttons */
     --btn-text-color: var(--white-100);
@@ -102,11 +106,11 @@
 
         /* button - external */
         --btn-external-text-color: var(--dark-400);
-        --btn-external-border-color: var(--gray-500);
+        --btn-external-border-color: var(--white-200);
         --btn-external-background-color: var(--white-200);
-        --btn-external-hover-text-color: var(--white-100);
-        --btn-external-hover-border-color: var(--white-100);
-        --btn-external-hover-background-color: var(--blue-dark);
+        --btn-external-hover-text-color: var(--dark-400);
+        --btn-external-hover-border-color: var(--blue-light-opacity);
+        --btn-external-hover-background-color: var(--blue-light-opacity);
 
     /* card */
     --card-text-color: var(--dark-400);
@@ -127,6 +131,19 @@
         --form-input-background-color: var(--white-100);
         --form-input-border-color: var(--gray-400);
         --form-input-border-focus-color: var(--blue-semilight);
+
+        /* form - search input */
+        --form-search-input-text-color: var(--dark-400);
+        --form-search-input-placeholder-color: var(--gray-600);
+        --form-search-input-background-color: var(--transparent);
+        --form-search-input-border-color: var(--transparent);
+        --form-search-input-border-focus-color: var(--blue-semilight);
+
+        /* form - checkbox */
+        --form-checkbox-text-color: var(--white-100);
+        --form-checkbox-border-color: var(--gray-400);
+        --form-checkbox-checked-border-color: var(--blue);
+        --form-checkbox-checked-background-color: var(--blue);
 
         /* form - input error */
         --form-error-input-text-color: var(--dark-400);
@@ -196,6 +213,12 @@ html, body {
     height: 100dvh;
 }
 
+.backoffice-wrapper {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    height: 100dvh;
+}
+
 .card {
    background-color: var(--card-background-color);
    border: 1px solid var(--card-border-color);
@@ -220,6 +243,46 @@ html, body {
    }
 }
 
+/* typography */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: var(--font-standard);
+    color: var(--text-heading-color);
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+
+h1, .h1 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+h2, .h2 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+h3, .h3 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+h4, .h4 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+h5 .h5 {
+   font-size: 20px;
+   font-weight: 600;
+}
+
+h6 .h6 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
 /* links */
 a {
     color: var(--link-color);
@@ -235,5 +298,433 @@ a {
     }
 }
 
+.nav-links {
+    display: grid;
+    gap: 0.5rem;
+
+    .nav-links{
+        transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out, color 0.1s ease-in-out;
+        background-color: var(--navlink-background-color);
+        border: 1px solid var(--navlink-border-color);
+        color: var(--navlink-text-color);
+        border-radius: var(--border-radius);
+        text-decoration: none;
+        padding: 1rem 1.5rem;
+        font-size: 1em;
+        font-family: var(--font-standard);
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+
+        &:hover {
+            background-color: var(--navlink-background-hover-color);
+            border-color: var(--navlink-border-hover-color);
+            color: var(--navlink-text-hover-color);
+            text-decoration: none;
+        }
+
+        &.active {
+            background-color: var(--navlink-background-active-color);
+            border-color: var(--navlink-border-activer-color);
+            color: var(--navlink-text-active-color);
+            text-decoration: none;
+        }
+    }
+}
+
+/* buttons */
+
+.btn {
+    transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out, color 0.1s ease-in-out;
+    background-color: var(--btn-background-color);
+    border: 1px solid var(--btn-border-color);
+    color: var(--btn-text-color);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 400;
+    font-style: normal;
+    font-family: var(--font-standard);
+    padding: 0.8rem 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--btn-hover-background-color);
+        border: 1px solid var(--btn-hover-border-color);
+        color: var(--btn-hover-text-color);
+    }
+}
+
+.btn-external {
+    transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out, color 0.1s ease-in-out;
+    background-color: var(--btn-external-background-color);
+    border: 1px solid var(--btn-external-border-color);
+    color: var(--btn-external-text-color);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 400;
+    font-style: normal;
+    font-family: var(--font-standard);
+    padding: 0.8rem 1.5rem;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr;
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--btn-external-hover-background-color);
+        border: 1px solid var(--btn-external-hover-border-color);
+        color: var(--btn-external-hover-text-color);
+    }
+}
+
+.btn-account {
+    transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out, color 0.1s ease-in-out;
+    background-color: var(--btn-account-background-color);
+    border: 1px solid var(--btn-account-border-color);
+    color: var(--btn-account-text-color);
+    border-radius: 50%;
+}
+
+/* dividers */
+.or-devider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+
+    &::before,
+    &::after {
+        content: '';
+        flex: 1;
+        border-bottom: 1px solid var(--divider-color);
+    }
+
+    &:not(:empty)::before {
+        margin-right: 1rem;
+    }
+
+    &:not(:empty)::after {
+        margin-left: 1rem;
+    }
+
+    span {
+        font-size: 0.8em;
+        text-transform: uppercase;
+        color: var(--text-muted-semilight-color);
+    }
+}
+
+/* forms */
+form {
+    width: 100%;
+    text-align: left;
+}
+
+.form-group {
+    display: grid;
+    gap: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+.form-checkbox-group {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+
+    .form-label {
+        font-weight: 400;
+        margin-top: 2px;
+        cursor: pointer;
+    }
+}
+
+.form-label {
+    font-size: 1em;
+    font-weight: 600;
+    font-style: normal;
+    font-family: var(--font-standard);
+    color: var(--form-label-color);
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.form-search-input {
+    position: relative;
+    width: 100%;
+    font-size: 1em;
+    font-weight: 400;
+    font-style: normal;
+    font-family: var(--font-standard);
+    color: var(--form-search-input-text-color);
+    padding: 0.5rem 1rem;
+    outline: none;
+    background-color: var(--form-search-input-background-color);
+    border: 1px solid var(--form-search-input-border-color);
+    transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out, color 0.1s ease-in-out;
+
+    &:focus {
+        border-bottom: 1px solid var(--form-input-border-focus-color);
+    }
+
+    &::placeholder {
+        color: var(--form-input-placeholder-color);
+        font-size: 0.9em;
+    }
+}
+
+.form-input {
+    position: relative;
+    width: 100%;
+    min-height: 40px;
+    font-size: 1em;
+    font-weight: 400;
+    font-style: normal;
+    font-family: var(--font-standard);
+    color: var(--form-input-text-color);
+    padding: 0.5rem 1rem;
+    outline: none;
+    border-radius: var(--border-radius);
+    background-color: var(--form-input-background-color);
+    border: 1px solid var(--form-input-border-color);
+    transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out, color 0.1s ease-in-out;
+
+    &:focus {
+        border: 1px solid var(--form-input-border-focus-color);
+    }
+
+    &::placeholder {
+        color: var(--form-input-placeholder-color);
+        font-size: 0.9em;
+    }
+}
+
+.form-checkbox {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+
+    .form-checkbox-input {
+        display: none;
+
+        &:checked + .form-checkbox-box {
+            background-color: var(--form-checkbox-checked-background-color);
+            border-color: var(--form-checkbox-checked-border-color);
+            
+            &::after {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        &:focus + .form-checkbox-box {
+            outline: 2px solid var(--form-checkbox-checked-border-color);
+            outline-offset: 2px;
+        }
+    }
+
+    .form-checkbox-box {
+        width: 20px;
+        height: 20px;
+        border: 2px solid var(--form-checkbox-border-color);
+        border-radius: 5px;
+        background-color: var(--white-100);
+        transition: all 0.1s ease-in-out;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0.4rem;
+            top: 0.1rem;
+            width: 5px;
+            height: 10px;
+            border: solid var(--form-checkbox-text-color);
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg) scale(0);
+            transform-origin: center;
+            opacity: 0;
+            transition: all 0.1s ease-in-out;
+        }
+    }
+
+    .form-checkbox-input:checked + .form-checkbox-box {
+        background-color: var(--form-checkbox-checked-background-color);
+        border-color: var(--form-checkbox-checked-border-color);
+
+        &::after {
+            opacity: 1;
+            transform: rotate(45deg) scale(1);
+        }
+    }
+}
+
+.form-select {
+    position: relative;
+    font-family: var(--font-standard);
+    width: 100%;
+
+    &:has.placeholder {
+        .form-select-trigger {
+            color: var(--form-input-placeholder-color);
+            font-size: 0.9em;
+        }
+    }
+
+    &:not(.has-placeholder) {
+        .form-select-trigger {
+            color: var(--form-input-text-color);
+        }
+    }
+
+    .form-select-trigger {
+        width: 100%;
+        min-height: 40px;
+        background-color: var(--form-input-background-color);
+        border: 1px solid var(--form-input-border-color);
+        padding: 0.5rem 1rem;
+        border-radius: var(--border-radius);
+        font-size: 1em;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: border-color 0.2s ease-in-out;
+        position: relative;
+
+        .form-select-text {
+            flex: 1;
+            text-align: left;
+        }
+    
+        &::before {
+            content: '\f141';
+            font-family: var(--font-fontawesome-pro);
+            color: var(--form-input-text-color);
+            position: absolute;
+            right: 1rem;
+            pointer-events: none;
+        }
+    }
+
+    .form-select-options {
+        position: absolute;
+        top: calc(100% + 4px);
+        left: 0;
+        width: 100%;
+        background-color: var(--form-input-background-color);
+        border: 1px solid var(--form-input-border-color);
+        border-radius: var(--border-radius);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.01);
+        list-style: none;   
+        padding: 0%;
+        margin: 0;
+        z-index: 999;
+        display: none;
+    }
+
+    .form-select-option {
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        transition: background-color 0.1s ease-in-out;
+        border-radius: var(--border-radius);
+        margin: 0.5rem;
+
+        &:hover {
+            background-color: var(--blue-light-opacity);
+        }
+    }
+
+    &.open {
+        .form-select-options {
+            display: block;
+        }
+    }
+}
+
+
+
+textarea,
+.form-textarea {
+    resize: none;
+    min-height: 150px;
+}
+
+/* logotype */
+.logotype {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 26px;
+    font-weight: 700;
+    font-family: var(--font-logo);
+    color: var(--text-color);
+
+    a {
+        font-size: 26px;
+        font-weight: 700;
+        font-family: var(--font-logo);
+        color: var(--text-color);
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
 /* setions */
-#signup {}
+#sidebar {
+    border-right: 1px solid var(--border-color);
+    padding: 2rem;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    gap: 2rem;
+}
+
+#header {
+    border-bottom: 1px solid var(--border-color);
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 3rem;
+
+}
+
+#main {
+    padding: 2rem;
+}
+
+#signup,
+#login {
+    .card {
+        text-align: center;
+        width: 550px;
+
+        .card-header {
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .card-footer {
+            margin-top: 3rem;
+        }
+    }
+
+    .form-checkbox-group {
+        margin: 2rem 0;
+    }
+}

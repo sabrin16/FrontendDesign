@@ -5,37 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://kit.fontawesome.com/a576612222.css" crossorigin="anonymous">
     <link rel="stylesheet" href="site.css">
-    <title>Sig Up - BackOffice Alpha Portal</title>
+    <title>Login - BackOffice Alpha Portal</title>
 </head>
 <body>
     <div class="center-wrapper">
         <main>
 
 
-            <section id="signup" >
+            <section id="sigin" >
                <div class="card">
                    <div class="card-header">
-                       <h1>Create Account</h1>
+                       <h1>Login</h1>
                    </div>
                    <div class="card-body">
                         <form method="post" asp-action="" novalidate>
                             <button type="submit" class="btn-external">
                                 <img src="images/icons/google-icon.svg" />
-                                <span>Sign up with Google</span> 
+                                <span>Log in with Google</span> 
                             </button>
                         </form>
 
                         <div class="or-devider"><span>or</span></div>
 
                         <form method="post" asp-controller="" asp-action="" novalidate>
-                            <div class="form-group">
-                                <label class="form-label">First Name</label>
-                                <input class="form-input" type="text" placeholder="Enter First name" />
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label">Last Name</label>
-                                <input class="form-input" type="text" placeholder="Enter Last name" />
-                            </div>
                             <div class="form-group">
                                 <label class="form-label">Email</label>
                                 <input class="form-input" type="email" placeholder="Enter email address" />
@@ -44,23 +36,19 @@
                                 <label class="form-label">Password</label>
                                 <input class="form-input" type="password" placeholder="Enter password" />
                             </div>
-                            <div class="form-group">
-                                <label class="form-label">Confirm Password</label>
-                                <input class="form-input" type="password" placeholder="Confirm password" />
-                            </div>
                             <div class="form-checkbox-group">
                                 <label class="form-checkbox">
                                     <input id="terms-checkbox" class="form-checkbox-input" type="checkbox" />
                                     <span class="form-checkbox-box"></span>
                                 </label>
-                                <label for="terms-checkbox" class="form-label">I accept <a href="#">Terms and Conditions</a></label>
+                                <label for="persistent-checkbox" class="form-label">Rember me</label>
                             </div> 
                             
-                            <button type="submit" class="btn">Create Account</button>
+                            <button type="submit" class="btn">Log In</button>
 
                         </form>
                    </div>
-                   <div class="card-footer">Already have an Account? <a href="login.html">Log in</a></div>
+                   <div class="card-footer">Don't have an Account? <a href="signup.html">Sign in</a></div>
                </div>
             </section>
 
