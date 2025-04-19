@@ -23,11 +23,11 @@
     --green-dark: #187848;
     --yellow-light: #FFF6C7;
     --yellow-semilight: #FFF3B4;
-    --yellow: #6C6102;
+    --yellow: #efdf49;
     --yellow-dark: #8B7400;
     --red-light: #FFEAE4;
     --red-semilight: #FFB8A5;
-    --red: #DE3434;
+    --red: #FF6640;
     --red-dark: #B83030;
     --white-100: #FFFFFF;
     --white-200: #F5F7FA;
@@ -56,7 +56,7 @@
     /* borders & dividers */
     --border-color: var(--gray-500);
     --border-focus-color: var(--blue-semilight);
-    --divider-color: var(--gray-500);
+    --divider-color: var(--gray-200);
 
     /* text */
     --text-color: var(--dark-400);
@@ -69,9 +69,23 @@
     --modal-background-color: var(--dark-opacity-20);
 
     /* dots */
-    --dot-red-background-color: var(--red);
-    --dot-yellow-background-color: var(--yellow);
-    --dot-green-background-color: var(--green);
+    --dot-background-color: var(--white-200);
+    --dot-red-text-color: var(--red);
+    --dot-yellow-text-color: var(--yellow);
+    --dot-green-text-color: var(--green);
+
+    /* badges */
+    --badge-red-text-color: var(--white-100);
+    --badge-red-border-color: var(--white-100);
+    --badge-red-background-color: var(--red);
+
+    --badge-yellow-text-color: var(--dark-400);
+    --badge-yellow-border-color: var(--white-100);
+    --badge-yellow-background-color: var(--yellow);
+
+    --badge-green-text-color: var(--white-100);
+    --badge-green-border-color: var(--white-100);
+    --badge-green-background-color: var(--green);
 
     /* links */
     --link-color: var(--blue);
@@ -98,6 +112,11 @@
     --btn-hover-border-color: var(--white-100);
     --btn-hover-background-color: var(--blue-dark);
 
+        /* button account */
+        --btn-account-text-color: var(--dark-400);
+        --btn-account-border-color: var(--white-100);
+        --btn-account-background-color: var(--transparent);
+        
         /* button - notification  */
         --btn-notification-text-color: var(--dark-400);
         --btn-notification-text-hover-color: var(--dark-400);
@@ -112,10 +131,23 @@
         --btn-external-hover-border-color: var(--blue-light-opacity);
         --btn-external-hover-background-color: var(--blue-light-opacity);
 
+        /* button - close */
+        --btn-closse-text-color: var(--dark-400);
+        --btn-closse-border-color: var(--transparent);
+        --btn-closse-background-color: var(--transparent);
+        --btn-closse-text-hover-color: var(--dark-400);
+        --btn-closse-border-hover-color: var(--transparent);
+        --btn-closse-background-hover-color: var(--blue-light-opacity);
+
     /* card */
     --card-text-color: var(--dark-400);
     --card-border-color: var(--white-100);
     --card-background-color: var(--white-100);
+
+    /* dropdown */
+    --dropdown-text-color: var(--dark-400);
+    --dropdown-border-color: var(--white-100);
+    --dropdown-background-color: var(--white-100);
 
     /* form */
     --from-text-color: var(--dark-400);
@@ -173,12 +205,15 @@
     --alert-notification-error-background-color: var(--red-light);
 
     /* account */
-    --account-info-background-color: var(--dark-300);
-    --account-info-text-color: var(--white-200);
-    --account-option-text-color: var(--white-200);
+    --account-name-text-color: var(--dark-400);
+    --account-name-border-color: var(--white-200);
+    --account-name-background-color: var(--white-200);
+    --account-name-images-border-color: var(--white-100);
+
+   /* --account-option-text-color: var(--white-200);
     --account-option-background-color: var(--transparent);
     --account-option-background-hover-color: var(--blue-light-opacity);
-    --account-option-text-hover-color: var(--white-200);
+    --account-option-text-hover-color: var(--white-200); */
 
     /* user - notification */
     --user-notifacation-text-color: var(--dark-400);
@@ -219,7 +254,60 @@ html, body {
     height: 100dvh;
 }
 
+#sidebar {
+    border-right: 1px solid var(--border-color);
+    padding: 1.5rem 2rem;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    gap: 2rem;
+}
+
+#header {
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.5rem 2rem;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr auto auto;
+    gap: 3rem;
+
+}
+
+.page {
+    padding: 2rem;
+
+    .page-header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
+/* modals */
+.modal {
+    z-index: 500;
+    background-color: var(--modal-background-color);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+    .btn-close {
+        z-index: 999;
+    }
+
+    .modal-show {
+        display: flex !important;
+    }
+}
+
+/* cards */
 .card {
+   position: relative;
    background-color: var(--card-background-color);
    border: 1px solid var(--card-border-color);
    color: var(--card-text-color); 
@@ -240,6 +328,80 @@ html, body {
 
    .card-footer {
        margin-top: 2rem;
+   }
+}
+
+.dropdown {
+   display: none;
+   position: absolute;
+   right: 0;
+   top: 110%;
+   background-color: var(--dropdown-background-color);
+   border: 1px solid var(--dropdown-border-color);
+   color: var(--dropdown-text-color); 
+   padding: 0.8rem;
+   border-radius: var(--border-radius);
+   box-shadow: var(--box-shadow);
+
+   .dropdown-header {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+   }
+
+   .dropdown-body {
+   }
+
+   .dropdown-footer {
+   }
+
+   .devider {
+       margin: 1rem 0;
+   }
+
+   .dropdown-options {
+        display: grid;
+        gap: 0.5rem;
+        margin-top: 1rem;
+
+        .dropdown-option{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+        }
+   }
+
+   .dropdown-actions {
+        display: grid;
+        gap: 0.5rem;
+
+        .dropdown-action {
+            transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out, color 0.1s ease-in-out;
+            background-color: var(--navlink-background-color);
+            border: 1px solid var(--navlink-border-color);
+            color: var(--navlink-text-color);
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            font-size: 1em;
+            font-family: var(--font-standard);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+
+            &:hover {
+                background-color: var(--navlink-background-hover-color);
+                border-color: var(--navlink-border-hover-color);
+                color: var(--navlink-text-hover-color);
+                text-decoration: none;
+            }
+        }
+   }
+
+   &.dropdown-show {
+        display: block;
    }
 }
 
@@ -333,12 +495,64 @@ a {
     }
 }
 
-/* buttons */
+/* switches */
+.switch-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
 
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+}
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--switch-background-color);
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 16px;
+        width: 16px;
+        left: 3px;
+        bottom: 3px;
+        background-color: var(--switch-slider-color);
+        transition: 0.4s;
+        border-radius: 50%;
+    }
+
+input:checked + .slider {
+    background-color: var(--switch-cheked-background-color);
+}
+
+    input:checked + .slider:before {
+        transform: translateX(18px);
+    }
+
+/* buttons */
 .btn {
     transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out, color 0.1s ease-in-out;
     background-color: var(--btn-background-color);
-    border: 1px solid var(--btn-border-color);
+    border: 2px solid var(--btn-border-color);
     color: var(--btn-text-color);
     border-radius: var(--border-radius);
     text-decoration: none;
@@ -352,10 +566,12 @@ a {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    gap: 0.5rem;
+    min-width: 150px;
 
     &:hover {
         background-color: var(--btn-hover-background-color);
-        border: 1px solid var(--btn-hover-border-color);
+        border: 2px solid var(--btn-hover-border-color);
         color: var(--btn-hover-text-color);
     }
 }
@@ -388,13 +604,125 @@ a {
 .btn-account {
     transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out, color 0.1s ease-in-out;
     background-color: var(--btn-account-background-color);
-    border: 1px solid var(--btn-account-border-color);
+    border: 2px solid var(--btn-account-border-color);
     color: var(--btn-account-text-color);
     border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 40px;
+        width: 40px;
+        object-fit: contain;
+    }
+}
+
+.btn-notififaction {
+    transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out, color 0.1s ease-in-out;
+    background-color: var(--btn-notification-background-color);
+    border: 1px solid var(--btn-notification-border-color);
+    color: var(--btn-notification-text-color);
+    font-size: 1.4em;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+    height: 40px;
+
+    .dot {
+        display: none;
+        position: absolute;
+        right: 3px;
+        top: 4px;
+        z-index: 1;
+    }
+}
+
+.btn-close {
+    transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out, color 0.1s ease-in-out;
+    background-color: var(--btn-close-background-color);
+    border: 1px solid var(--btn-close-border-color);
+    color: var(--btn-close-text-color);
+    z-index: 999;
+    font-size: 1.4rem;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    height: 40px;
+    width: 40px;
+
+    &::before {
+        content: '\f00d';
+        font-family: var(--font-fontawesome-pro);
+    }
+
+    &:hover {
+        background-color: var(--btn-close-background-hover-color);
+        border: 1px solid var(--btn-close-border-hover-color);
+        color: var(--btn-close-text-hover-color);
+        text-decoration: none;
+    }
+}
+
+/* dots */
+.dot {
+    font-size: 0.5em;
+    background-color: var(--);
+    padding: 2px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dot-red-background-color);
+
+    &.dot-red {
+        color: var(--dot-red-text-color);
+    }
+    &.dot-yellow {
+        color: var(--dot-yellow-text-color);
+    }
+    &.dot-green {
+        color: var(--dot-green-text-color);
+    }
+}
+
+.badge {
+    border-radius: var(--border-radius);
+    padding: 0.25rem 0.5rem;
+    font-size: 0.9em;
+    font-weight: 400;
+    font-style: normal;
+    font-family: var(--font-standard);
+
+    &.badge-red {
+        background-color: var(--badge-red-background-color);
+        border: 1px solid var(--badge-red-border-color);
+        color: var(--badge-red-text-color);
+
+    }
+}
+
+ /* helpers */
+
+.hide {
+    display: none !important;
+}
+
+.show {
+    display: block !important;
+}
+
+.open {
+    display: flex !important;
 }
 
 /* dividers */
-.or-devider {
+.devider {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -687,25 +1015,112 @@ textarea,
 }
 
 /* setions */
-#sidebar {
-    border-right: 1px solid var(--border-color);
-    padding: 2rem;
-    display: grid;
-    grid-template-rows: auto auto 1fr;
-    gap: 2rem;
+#notification-container {
+    position: relative;
+
+    .dropdown {
+        min-width: 450px;
+        width: 100%;
+    }
+
+    .dropdown-header {
+        margin: 0.5rem 0.5rem 0;
+    }
+
+    .notification {
+        display: grid;
+        gap: 0.5rem;
+
+        .notification {
+            transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out, color 0.1s ease-in-out;
+            color: var(--user-notifacation-text-color);
+            border: 2px solid var(--user-notification-border-color);
+            background-color: var(--user-notification-background-color);
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            grid-template-areas: "img message btn" "img time btn";
+            align-items: center;
+            gap: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius);
+            width: 100%;
+
+            &:hover {
+                color: var(--user-notifacation-text-hover-color);
+                border: 2px solid var(--user-notification-border-hover-color);
+                background-color: var(--user-notification-background-hover-color);
+            }
+         
+            .user-image {
+                grid-area: img;
+                border-radius: 50%;
+                overflow: hidden;
+                height: 56px;
+                width: 56px;
+                border: 3px solid var(--account-name-image-border-color);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .project-image {
+                grid-area: img;
+                border-radius: var(--border-radius);
+                overflow: hidden;
+                height: 56px;
+                width: 56px;
+                border: 2px solid var(--account-name-image-border-color);
+            }
+
+            img {
+                height: 56px;
+                width: 56px;
+            }
+
+            .message {
+                grid-area: message;
+                color: var(--user-notifacation-text-color);
+            }
+
+            .time {
+                grid-area: time;
+                font-size: 0.9em;
+                color: var(--user-notifacation-text-muted-color);
+            }
+
+            .btn-close {
+                grid-area: btn;
+            }
+        }
+    }
 }
 
-#header {
-    border-bottom: 1px solid var(--border-color);
-    padding: 2rem;
-    display: grid;
-    grid-template-columns: 1fr auto auto;
-    gap: 3rem;
+#account-container {
+    position: relative;
 
-}
+    .dropdown {
+        min-width: 350px;
+        width: 100%;
+    }
 
-#main {
-    padding: 2rem;
+    .account-name {
+        color: var(--account-name-text-color);
+        border: 3px solid var(--account-name-border-color);
+        background-color: var(--account-name-background-color);
+        display: grid;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        border-radius: var(--border-radius);
+        width: 100%;
+
+        img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid var(--account-name-image-border-color);
+        }
+    }
 }
 
 #signup,
@@ -723,8 +1138,10 @@ textarea,
             margin-top: 3rem;
         }
     }
+}
 
-    .form-checkbox-group {
-        margin: 2rem 0;
+#add-project-modal {
+    .card {
+        width: 550px;
     }
 }
