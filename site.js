@@ -1,3 +1,28 @@
+const uploadTrigger = document.getElementById('upload-trigger')
+const fileInput = document.getElementById('image-upload')
+const imagePreview = document.getElementById('image-preview')
+const imagePreviewIcon = document.getElementById('image-preview-icon')
+
+uploadTrigger.addEventListener('click', function() {
+    fileInput.click()
+})
+
+fileInput.addEventListener('change', function(e) {
+  const file = e.target.files[0]
+  if (file && file.type.startswith('image/')) {
+     const reader = new FileReader()
+
+     reader.onload = (e) => {
+         imagePreview.src = e.target.result
+         imagePreview.classList.remove('hide')
+         imagePreviewIcon.classList.add('selected')
+    }
+
+    reader.readAsDataURL(file)
+  }
+})
+
+
 const dropdowns = document.querySelectorAll('[data-type="dropdown"]')
 
 document.addEventListener('click', function (event) {
@@ -25,37 +50,30 @@ document.addEventListener('click', function (event) {
       openDropdown.classList.remove('dropdown-show')
     })
   }
+})
 
   
 
 
   const modals = document.querySelectorAll('[data-type="modal"]')
-
-  document.addEventListener('click', function (event) {
-    let clickedDropdown = null
-  
-    modals.forEach(modal => {
+  modals.forEach(modal => {
+    modal.addEventListener('click', function () {
       const targetId = modal.getAttribute('data-target')
       const targetElement = document.querySelector(targetId)
+      console.log(targetElement)
   
-      if (modal.contains(event.target)) {
-        clickedDropdown = targetElement
-  
-        document.querySelectorAll('.dropdown.dropdown-show').forEach(openDropdown => {
-          if (openDropdown !== targetElement) {
-            openDropdown.classList.remove('dropdown-show')
-          }
-        })
-  
-        targetElement.classList.toggle('dropdown-show')
-      }
+      targetElement.classList.add('modal-show')
     })
+  })
   
-    if (!clickedDropdown && !event.target.closest('.dropdown')) {
-      document.querySelectorAll('.dropdown.dropdown-show').forEach(openDropdown => {
-        openDropdown.classList.remove('dropdown-show')
-      })
-    }
+  const closeButtons = document.querySelectorAll('[data-type="close"]')
+  closeButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      const targetId = button.getAttribute('data-target')
+      const targetElement = document.querySelector(targetId)
+  
+      targetElement.classList.remove('modal-show')
+    })
   })
 
 
