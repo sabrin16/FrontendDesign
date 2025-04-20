@@ -1,6 +1,23 @@
+const addProjectDescriptionTextarea = document.getElementById('add-project-description')
+const addProjectDescriptionQuill = new Quill('#add-project-description-wysiwyg-editor', {
+    modules: {
+        syntax: true,
+        toolbar: '#add-project-description-wysiwyg-toolbar'
+    },
+    theme: 'snow',
+    placeholder: 'Type something'
+});
+
+addProjectDescriptionQuill.on('text-change', function() {
+  addProjectDescriptionTextarea.value = addProjectDescriptionQuill.root.innerHTML
+})
+
+
+
 const uploadTrigger = document.getElementById('upload-trigger')
 const fileInput = document.getElementById('image-upload')
 const imagePreview = document.getElementById('image-preview')
+const imagePreviewIconContainer = document.getElementById('image-preview-icon-container')
 const imagePreviewIcon = document.getElementById('image-preview-icon')
 
 uploadTrigger.addEventListener('click', function() {
@@ -15,7 +32,10 @@ fileInput.addEventListener('change', function(e) {
      reader.onload = (e) => {
          imagePreview.src = e.target.result
          imagePreview.classList.remove('hide')
-         imagePreviewIcon.classList.add('selected')
+         imagePreviewIconContainer.classList.add('selected')
+         imagePreviewIcon.classList.remove('fa-camera')
+         imagePreviewIcon.classList.add('fa-pen-to-square')    
+       
     }
 
     reader.readAsDataURL(file)
@@ -24,6 +44,8 @@ fileInput.addEventListener('change', function(e) {
 
 
 const dropdowns = document.querySelectorAll('[data-type="dropdown"]')
+
+
 
 document.addEventListener('click', function (event) {
   let clickedDropdown = null
@@ -75,8 +97,6 @@ document.addEventListener('click', function (event) {
       targetElement.classList.remove('modal-show')
     })
   })
-
-
 
 
 

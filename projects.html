@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9,0/highlight.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+
     <link rel="stylesheet" href="https://kit.fontawesome.com/a576612222.css" crossorigin="anonymous">
     <link rel="stylesheet" href="site.css">
     <title>Projects - BackOffice Alpha Portal</title>
@@ -12,7 +16,7 @@
         <aside id="sidebar">
             <section class="logotype">
                 <a href="#">
-                    <img src="images/logotype/alpha-logotype-icon.svg" alt="alpha">
+                    <img src="images//logotype/alpha-logotype-icon.svg" alt="alpha">
                     <span>alpha</span>
                 </a>
             </section>
@@ -21,11 +25,11 @@
                     <i class="fa-duotone fa-solid fa-briefcase"></i>
                     <span>Projects</span>
                 </a>
-                <a href="#" class="nav-links">
+                <a href="#" class="nav-link">
                     <i class="fa-duotone fa-solid fa-handshake"></i>
                     <span>Clients</span>
                 </a>
-                <a href="#" class="nav-links">
+                <a href="#" class="nav-link">
                     <i class="fa-duotone fa-solid fa-user-group"></i>
                     <span>Members</span>
                 </a>
@@ -112,11 +116,66 @@
                         <span>Add Project</span>
                     </button>
                 </div>
+
+                <section class="Project-list">
+                    <div class="project card">
+                        <div class="card-header">
+                            <div class="project-image">
+                                <img src="images/projects/project-template-purple.svg" alt="template project">
+                            </div>
+                            <h6 class="project-name">Website Redesign</h6>
+                            <span class="client.name">GitLab Inc.</span>
+                            <div id="project-actions-container">
+                                <button type="button" data-type="dropdown" data-target="#project-dropdown" class="btn-action">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </button>
+                                <div id="project-dropdown" class="dropdown">
+                                    <div class="dropdown-body">
+                                        <div class="divider"></div>
+                                        <nav class="dropdown-actions">
+                                            <a class="dropdown-action" href="#">
+                                                <i class="fa-duotone fa-solid fa-pen-to-square"></i>
+                                                <span>Edit</span>
+                                            </a>
+                                            <a class="dropdown-action" href="#">
+                                                <i class="fa-duotone fa-solid fa-user-plus" style="--fa-primary-opacity: 0.4; --fa-secondary-opacity: 1;"></i>
+                                                <span>Add Member</span>
+                                            </a>
+                                        </nav>
+                                        <div class="divider"></div>
+                                        <nav class="dropdown-actions">
+                                            <a class="dropdown-action remove" href="#">
+                                                <i class="fa-duotone fa-solid fa-trash"></i>
+                                                <span>Delete Project</span>
+                                            </a>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p>It is necessary to develop a website redesign in a corpoate style.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="badge badge-normal">
+                                <i class="fa-duotone fa-solid fa-clock"></i>
+                                <span>5 day left</span>
+                            </div>
+                            <div class="member">
+                                <div class="user-image">
+                                    <img src="images/users/user-template-male-green.svg" alt="template project">
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </section>
+
             </div>
         </main>
     </div>
 
-    <section id="add-project-modal" class="modal modal-show">
+
+    <section id="add-project-modal" class="modal">
         <div class="card">
             <div class="card-header">
                 <h3>Add Project</h3>
@@ -126,14 +185,14 @@
 
                 <form asp-controller="" asp-action="" method="post" enctype="multipart/form-data" novalidate>
                     <div class="form-group">
-                      <div id="upload-trigger" class="image-preview-container user-image">
+                      <div id="upload-trigger" class="image-preview-container project-image">
                         <img id="image-preview" src="#" class="hide" />
-                        <div id="image-preview-icon" class="circle circle-gray">
-                            <i class="fa-duotone fa-solid fa-camera" style="--fa-primary-color: #bdbdbd; --fa-secondary-color: #ffffff; --fa-secondary-opacity: 1;"></i>
+                        <div id="image-preview-icon-container" class="circle circle-gray">
+                            <i id="image-preview-icon" class="fa-duotone fa-solid fa-camera" style="--fa-primary-color: #bdbdbd; --fa-secondary-color: #ffffff; --fa-secondary-opacity: 1;"></i>
                         </div>
                       </div>
-                      <input type="file" id="image-upload" accept="image/*" class="hide" />
-
+                      <input type="file" id="image-upload" accept="image/*" />
+                       
                     </div>
                     <div class="form-group">
                         <label class="form-label">Project Name</label>
@@ -152,9 +211,32 @@
                             <input type="hidden" name="client-select-value" />
                         </div>
                     </div>
+
                     <div class="form-group">
                         <label class="form-label">Description</label>
-                        <textarea class="form-input"></textarea>
+                        <div class="wysiwyg">
+                            <textarea id="add-project-description"></textarea>
+                            <div id="add-project-description-wysiwyg-editor" class="wysiwyg-editor"></div>
+                            <div id="add-project-description-wysiwyg-toolbar" class="wysiwyg-toolbar">
+                                <span class="ql-formats">
+                                    <button class="ql-bold"></button>
+                                    <button class="ql-italic"></button>
+                                    <button class="ql-underline"></button>
+                                </span>
+                                <span class="ql-formats">
+                                    <button class="ql-align" value=""></button>
+                                    <button class="ql-align" value="center"></button>
+                                    <button class="ql-align" value="right"></button>
+                                </span>
+                                <span class="ql-formats">
+                                    <button class="ql-list" value="bullet"></button>
+                                    <button class="ql-list" value="ordered"></button>
+                                </span>
+                                <span class="ql-formats">
+                                    <button class="ql-link"></button>
+                                </span>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="form-horizontal-group">
@@ -192,7 +274,6 @@
 
                     <button type="submit" class="btn">Create</button>
                 </form>
-
             </div>
         </div>
     </section>
