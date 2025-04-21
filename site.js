@@ -13,6 +13,20 @@ addProjectDescriptionQuill.on('text-change', function() {
 })
 
 
+const editProjectDescriptionTextarea = document.getElementById('edit-project-description')
+const editProjectDescriptionQuill = new Quill('#edit-project-description-wysiwyg-editor', {
+    modules: {
+        syntax: true,
+        toolbar: '#edit-project-description-wysiwyg-toolbar'
+    },
+    theme: 'snow',
+    placeholder: 'Type something'
+});
+
+editProjectDescriptionQuill.on('text-change', function() {
+  editProjectDescriptionTextarea.value = editProjectDescriptionQuill.root.innerHTML
+})
+
 
 const uploadTrigger = document.getElementById('upload-trigger')
 const fileInput = document.getElementById('image-upload')
