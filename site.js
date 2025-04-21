@@ -13,7 +13,7 @@ addProjectDescriptionQuill.on('text-change', function() {
 })
 
 
-const editProjectDescriptionTextarea = document.getElementById('edit-project-description')
+const editProjectDescriptionTextarea = document.getElementById('add-project-description')
 const editProjectDescriptionQuill = new Quill('#edit-project-description-wysiwyg-editor', {
     modules: {
         syntax: true,
