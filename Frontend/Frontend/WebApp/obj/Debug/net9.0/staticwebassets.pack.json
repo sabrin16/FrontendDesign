@@ -1,0 +1,141 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/mm/Desktop/Explore/Shahnaz/ASPNET/Tips-Trix-kompletta-frontendguiden/Frontend-copy-5/WebApp/wwwroot/css/cookie-consent.css",
+      "PackagePath": "staticwebassets/css/cookie-consent.css"
+    },
+    {
+      "Id": "/Users/mm/Desktop/Explore/Shahnaz/ASPNET/Tips-Trix-kompletta-frontendguiden/Frontend-copy-5/WebApp/wwwroot/css/site.css",
+      "PackagePath": "staticwebassets/css/site.css"
+    },
+    {
+      "Id": "/Users/mm/Desktop/Explore/Shahnaz/ASPNET/Tips-Trix-kompletta-frontendguiden/Frontend-copy-5/WebApp/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/mm/Desktop/Explore/Shahnaz/ASPNET/Tips-Trix-kompletta-frontendguiden/Frontend-copy-5/WebApp/wwwroot/images/icons/google-icon.svg",
+      "PackagePath": "staticwebassets/images/icons/google-icon.svg"
+    },
+    {
+      "Id": "/Users/mm/Desktop/Explore/Shahnaz/ASPNET/Tips-Trix-kompletta-frontendguiden/Frontend-copy-5/WebApp/wwwroot/images/logotype/alpha-logotype-icon.svg",
+      "PackagePath": "staticwebassets/images/logotype/alpha-logotype-icon.svg"
+    },
+    {
+      "Id": "/Users/mm/Desktop/Explore/Shahnaz/ASPNET/Tips-Trix-kompletta-frontendguiden/Frontend-copy-5/WebApp/wwwroot/images/projects/0e269fcb-8b5e-41a5-9a91-b729eb32c6ac_Screenshot 2025-05-07 at 14.11.34.png",
+      "PackagePath": "staticwebassets/images/projects/0e269fcb-8b5e-41a5-9a91-b729eb32c6ac_Screenshot 2025-05-07 at 14.11.34.png"
+    },
+    {
+      "Id": "/Users/mm/Desktop/Explore/Shahnaz/ASPNET/Tips-Trix-kompletta-frontendguiden/Frontend-copy-5/WebApp/wwwroot/images/projects/33cf67ba-1462-41f9-89eb-99a6b758dbb1_Screenshot 2025-05-02 at 17.05.43.png",
+      "PackagePath": "staticwebassets/images/projects/33cf67ba-1462-41f9-89eb-99a6b758dbb1_Screenshot 2025-05-02 at 17.05.43.png"
+    },
+    {
+      "Id": "/Users/mm/Desktop/Explore/Shahnaz/ASPNET/Tips-Trix-kompletta-frontendguiden/Frontend-copy-5/WebApp/wwwroot/images/projects/73ca3218-1106-48ee-942b-291cc97548c9_Screenshot 2025-04-22 at 18.24.39.png",
+      "PackagePath": "staticwebassets/images/projects/73ca3218-1106-48ee-942b-291cc97548c9_Screenshot 2025-04-22 at 18.24.39.png"
+    },
+    {
+      "Id": "/Users/mm/Desktop/Explore/Shahnaz/ASPNET/Tips-Trix-kompletta-frontendguiden/Frontend-copy-5/WebApp/wwwroot/images/projects/7b9b9775-d17d-4d1d-b86c-65d3bb7d51ef_Screenshot 2025-05-02 at 17.02.27.png",
+      "PackagePath": "staticwebassets/images/projects/7b9b9775-d17d-4d1d-b86c-65d3bb7d51ef_Screenshot 2025-05-02 at 17.02.27.png"
+    },
+    {
+      "Id": "/Users/mm/Desktop/Explore/Shahnaz/ASPNET/Tips-Trix-kompletta-frontendguiden/Frontend-copy-5/WebApp/wwwroot/images/projects/7cffe158-3bff-40ec-88d1-12a7a64773f1_Screenshot 2025-05-02 at 16.54.12.png",
+      "PackagePath": "staticwebassets/images/projects/7cffe158-3bff-40ec-88d1-12a7a64773f1_Screenshot 2025-05-02 at 16.54.12.png"
+    },
+    {
+      "Id": "/Users/mm/Desktop/Explore/Shahnaz/ASPNET/Tips-Trix-kompletta-frontendguiden/Frontend-copy-5/WebApp/wwwroot/images/projects/861a7e0b-668a-49ef-9d29-a001d31c98c9_Screenshot 2025-05-02 at 17.07.02.png",
+      "PackagePath": "staticwebassets/images/projects/861a7e0b-668a-49ef-9d29-a001d31c98c9_Screenshot 2025-05-02 at 17.07.02.png"
+    },
+    {
+      "Id": "/Users/mm/Desktop/Explore/Shahnaz/ASPNET/Tips-Trix-kompletta-frontendguiden/Frontend-copy-5/WebApp/wwwroot/images/projects/b8d3fd8d-882f-498d-867f-273ef5bdef4e_Screenshot 2025-04-22 at 18.24.39.png",
+      "PackagePath": "staticwebassets/images/projects/b8d3fd8d-882f-498d-867f-273ef5bdef4e_Screenshot 2025-04-22 at 18.24.39.png"
+    },
+    {
+      "Id": "/Users/mm/Desktop/Explore/Shahnaz/ASPNET/Tips-Trix-kompletta-frontendguiden/Frontend-copy-5/WebApp/wwwroot/images/projects/e9f20203-b0d6-4fb5-adef-9700639de48d_Screenshot 2025-05-02 at 17.02.27.png",
+      "PackagePath": "staticwebassets/images/projects/e9f20203-b0d6-4fb5-adef-9700639de48d_Screenshot 2025-05-02 at 17.02.27.png"
+    },
+    {
+      "Id": "/Users/mm/Desktop/Explore/Shahnaz/ASPNET/Tips-Trix-kompletta-frontendguiden/Frontend-copy-5/WebApp/wwwroot/images/projects/f3645f67-2781-4ce8-acad-94ea52d83aa6_Screenshot 2025-05-02 at 16.59.42.png",
+      "PackagePath": "staticwebassets/images/projects/f3645f67-2781-4ce8-acad-94ea52d83aa6_Screenshot 2025-05-02 at 16.59.42.png"
+    },
+    {
+      "Id": "/Users/mm/Desktop/Explore/Shahnaz/ASPNET/Tips-Trix-kompletta-frontendguiden/Frontend-copy-5/WebApp/wwwroot/images/projects/project-template-purple.svg",
+      "PackagePath": "staticwebassets/images/projects/project-template-purple.svg"
+    },
+    {
+      "Id": "/Users/mm/Desktop/Explore/Shahnaz/ASPNET/Tips-Trix-kompletta-frontendguiden/Frontend-copy-5/WebApp/wwwroot/images/users/2611610e-34fc-4e0e-806c-8885bb92dcb4_user-template-male-green copy.svg",
+      "PackagePath": "staticwebassets/images/users/2611610e-34fc-4e0e-806c-8885bb92dcb4_user-template-male-green copy.svg"
+    },
+    {
+      "Id": "/Users/mm/Desktop/Explore/Shahnaz/ASPNET/Tips-Trix-kompletta-frontendguiden/Frontend-copy-5/WebApp/wwwroot/images/users/2e10c07e-6054-4cc8-b1e6-2bb972069a50_user-template-male-green copy.svg",
+      "PackagePath": "staticwebassets/images/users/2e10c07e-6054-4cc8-b1e6-2bb972069a50_user-template-male-green copy.svg"
+    },
+    {
+      "Id": "/Users/mm/Desktop/Explore/Shahnaz/ASPNET/Tips-Trix-kompletta-frontendguiden/Frontend-copy-5/WebApp/wwwroot/images/users/374a56c3-5d1a-4a5d-a47f-27e115a25a0b_Screenshot 2025-05-02 at 16.54.12.png",
+      "PackagePath": "staticwebassets/images/users/374a56c3-5d1a-4a5d-a47f-27e115a25a0b_Screenshot 2025-05-02 at 16.54.12.png"
+    },
+    {
+      "Id": "/Users/mm/Desktop/Explore/Shahnaz/ASPNET/Tips-Trix-kompletta-frontendguiden/Frontend-copy-5/WebApp/wwwroot/images/users/493ee930-9b7f-4e11-abf2-b3d2aaccef8c_Screenshot 2025-05-02 at 17.05.43.png",
+      "PackagePath": "staticwebassets/images/users/493ee930-9b7f-4e11-abf2-b3d2aaccef8c_Screenshot 2025-05-02 at 17.05.43.png"
+    },
+    {
+      "Id": "/Users/mm/Desktop/Explore/Shahnaz/ASPNET/Tips-Trix-kompletta-frontendguiden/Frontend-copy-5/WebApp/wwwroot/images/users/4fe1425c-36cb-49db-8449-7cf77750e1aa_Screenshot 2025-05-02 at 16.59.42.png",
+      "PackagePath": "staticwebassets/images/users/4fe1425c-36cb-49db-8449-7cf77750e1aa_Screenshot 2025-05-02 at 16.59.42.png"
+    },
+    {
+      "Id": "/Users/mm/Desktop/Explore/Shahnaz/ASPNET/Tips-Trix-kompletta-frontendguiden/Frontend-copy-5/WebApp/wwwroot/images/users/6802a0eb-6193-42bf-a191-7eabe2c64664_Screenshot 2025-05-02 at 17.02.27.png",
+      "PackagePath": "staticwebassets/images/users/6802a0eb-6193-42bf-a191-7eabe2c64664_Screenshot 2025-05-02 at 17.02.27.png"
+    },
+    {
+      "Id": "/Users/mm/Desktop/Explore/Shahnaz/ASPNET/Tips-Trix-kompletta-frontendguiden/Frontend-copy-5/WebApp/wwwroot/images/users/738224bb-0cb1-4e44-8d1a-720103be3b66_Screenshot 2025-05-02 at 17.02.27.png",
+      "PackagePath": "staticwebassets/images/users/738224bb-0cb1-4e44-8d1a-720103be3b66_Screenshot 2025-05-02 at 17.02.27.png"
+    },
+    {
+      "Id": "/Users/mm/Desktop/Explore/Shahnaz/ASPNET/Tips-Trix-kompletta-frontendguiden/Frontend-copy-5/WebApp/wwwroot/images/users/f1cde9fd-e48f-4c1b-b78b-ca6fc0d63038_Screenshot 2025-05-02 at 16.59.42.png",
+      "PackagePath": "staticwebassets/images/users/f1cde9fd-e48f-4c1b-b78b-ca6fc0d63038_Screenshot 2025-05-02 at 16.59.42.png"
+    },
+    {
+      "Id": "/Users/mm/Desktop/Explore/Shahnaz/ASPNET/Tips-Trix-kompletta-frontendguiden/Frontend-copy-5/WebApp/wwwroot/images/users/f352f50f-6fbc-4170-a21b-ddd5fd4af29a_Screenshot 2025-05-02 at 17.05.43.png",
+      "PackagePath": "staticwebassets/images/users/f352f50f-6fbc-4170-a21b-ddd5fd4af29a_Screenshot 2025-05-02 at 17.05.43.png"
+    },
+    {
+      "Id": "/Users/mm/Desktop/Explore/Shahnaz/ASPNET/Tips-Trix-kompletta-frontendguiden/Frontend-copy-5/WebApp/wwwroot/images/users/f3915df6-4d53-4098-a2c6-3b95ac235676_2e10c07e-6054-4cc8-b1e6-2bb972069a50_user-template-male-green copy.svg",
+      "PackagePath": "staticwebassets/images/users/f3915df6-4d53-4098-a2c6-3b95ac235676_2e10c07e-6054-4cc8-b1e6-2bb972069a50_user-template-male-green copy.svg"
+    },
+    {
+      "Id": "/Users/mm/Desktop/Explore/Shahnaz/ASPNET/Tips-Trix-kompletta-frontendguiden/Frontend-copy-5/WebApp/wwwroot/images/users/user-template-male-green copy.svg",
+      "PackagePath": "staticwebassets/images/users/user-template-male-green copy.svg"
+    },
+    {
+      "Id": "/Users/mm/Desktop/Explore/Shahnaz/ASPNET/Tips-Trix-kompletta-frontendguiden/Frontend-copy-5/WebApp/wwwroot/images/users/user-template-male-green.svg",
+      "PackagePath": "staticwebassets/images/users/user-template-male-green.svg"
+    },
+    {
+      "Id": "/Users/mm/Desktop/Explore/Shahnaz/ASPNET/Tips-Trix-kompletta-frontendguiden/Frontend-copy-5/WebApp/wwwroot/js/cookie-consent.js",
+      "PackagePath": "staticwebassets/js/cookie-consent.js"
+    },
+    {
+      "Id": "/Users/mm/Desktop/Explore/Shahnaz/ASPNET/Tips-Trix-kompletta-frontendguiden/Frontend-copy-5/WebApp/wwwroot/js/site.js",
+      "PackagePath": "staticwebassets/js/site.js"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.WebApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.WebApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.build.WebApp.props",
+      "PackagePath": "build\\WebApp.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.buildMultiTargeting.WebApp.props",
+      "PackagePath": "buildMultiTargeting\\WebApp.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.buildTransitive.WebApp.props",
+      "PackagePath": "buildTransitive\\WebApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,1 @@
+I used ChatGPT during the development of this assignment to assist with certain aspects of C# and ASP.NET. This included help with understanding specific concepts, writing code snippets, and resolving errors. The tool supported my learning and contributed to the completion of the project.

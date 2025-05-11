@@ -1,0 +1,36 @@
+<div id="cookieModal" class="cookie-modal" style="display: none;">
+    <div class="card">
+        <div class="content">
+            <h3>You have control over your data</h3>
+            <p>We and our business partners use technology, including cookies, to collect information.</p>
+            <p>By clicking "Accept", you consent to all purposes.</p>
+            <p><a href="#">Read more here</a></p>
+        </div>
+        <form id="cookieConsentForm" class="settings">
+            <h4>Cookies</h4>
+            <div class="options">
+                <div class="option">
+                    <label for="cookieEssential">Essential</label>
+                    <input type="checkbox" id="cookieEssential" name="essential">
+                </div>
+                <div class="option">
+                    <label for="cookieFunctional">Functional</label>
+                    <input type="checkbox" id="cookieFunctional" name="functional">
+                </div>
+                <div class="option">
+                    <label for="cookieAnalytics">Analytics & Statistics</label>
+                    <input type="checkbox" id="cookieAnalytics" name="analytics">
+                </div>
+                <div class="option">
+                    <label for="cookieMarketing">Marketing</label>
+                    <input type="checkbox" id="cookieMarketing" name="marketing">
+                </div>
+            </div>
+            <button type="button" onclick="acceptSelected()">Accept selected</button>
+        </form>
+    </div>
+</div>
+
+<div class="cookieConsentIcon" onclick="reopenCookieModal()">
+    <i class="fa-solid fa-cookie-bite"></i>
+</div>
